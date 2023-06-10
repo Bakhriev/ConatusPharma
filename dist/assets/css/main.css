@@ -273,7 +273,7 @@ body {
 
 @media (any-hover: hover) and (pointer: fine) {
     .sub-menu a:hover {
-        background: linear-gradient(to right, #5e8baf, #17687c);
+        background: linear-gradient(to right, #0f79cf, #204ad3);
         color: #fff;
     }
 }
@@ -470,27 +470,29 @@ body {
 }
 
 .nav__link {
-    color: #fff;
+    display: flex;
     position: relative;
+    color: #fff;
+    overflow: hidden;
 }
 
-@media (any-hover: hover) and (pointer: fine) {
-    .nav__link:hover::after {
-        transform: scaleX(1);
-        transform-origin: left bottom;
-    }
+.nav__link .v-text-1 {
+    display: flex;
 }
 
-.nav__link::after {
-    content: "";
+.nav__link .v-text-1 span {
+    display: block;
+}
+
+.nav__link .v-text-2 {
+    display: flex;
     position: absolute;
+    z-index: 2;
+    top: 0;
     left: 0;
-    bottom: -6px;
-    height: 1px;
-    width: 100%;
-    background: #fff;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: transform 200ms ease-in-out;
-    transform-origin: right bottom;
+    transform: translateY(100%);
+}
+
+.nav__link .v-text-2 span {
+    display: block;
 }

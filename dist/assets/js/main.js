@@ -40,3 +40,98 @@ const dropdownInit = () => {
 }
 
 dropdownInit()
+
+const dots = document.querySelectorAll('.dot')
+function animDots() {
+  let duration = 500
+  let delay = 300
+  let num = 0
+  dots.forEach(dot => {
+    dot.animate(
+      [
+        {
+          transform: 'translate(0, 0)',
+        },
+        {
+          transform: 'translate(0, -10px)',
+        },
+        {
+          transform: 'translate(0, 0)',
+        },
+      ],
+      {
+        duration: duration,
+        delay: delay - num,
+        easing: 'ease-in-out',
+      }
+    )
+    num += 100
+  })
+  setTimeout(() => {
+    loop()
+  }, 100)
+}
+
+function loop() {
+  setTimeout(() => {
+    animDots()
+  }, 3000)
+}
+
+animDots()
+
+const navLinks = document.querySelectorAll('.duplicate')
+
+navLinks.forEach(link => {
+  const spans1 = link.querySelectorAll('.v-text-1 span')
+  const spans2 = link.querySelectorAll('.v-text-2 span')
+
+  link.addEventListener('mouseover', () => {
+    {
+      let delay = 0
+      let duration = 250
+      spans1.forEach(span => {
+        span.style.transition = `transform ${duration}ms ease-in-out`
+        span.style.transitionDelay = `${delay}ms`
+        span.style.transform = 'translate(0, -110%)'
+        if (delay < 100) {
+          delay += 20
+        } else {
+          delay += 5
+        }
+        if (duration < 400) {
+          duration += 80
+        } else {
+          duration += 10
+        }
+      })
+    }
+    {
+      let delay = 0
+      let duration = 250
+      spans2.forEach(span => {
+        span.style.transition = `transform ${duration}ms ease-in-out`
+        span.style.transitionDelay = `${delay}ms`
+        span.style.transform = 'translate(0, -100%)'
+        if (delay < 150) {
+          delay += 10
+        } else {
+          delay += 5
+        }
+        if (duration < 400) {
+          duration += 80
+        } else {
+          duration += 20
+        }
+      })
+    }
+  })
+  link.addEventListener('mouseleave', () => {
+    spans1.forEach(span => {
+      span.style.transform = `translate(0, 0)`
+    })
+    spans2.forEach(span => {
+      span.style.transform = `translate(0, 100%)`
+    })
+  })
+})

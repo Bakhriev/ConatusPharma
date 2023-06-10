@@ -78,33 +78,84 @@
   }
 
   &__link {
-    color: $light;
-    // transition: color 0.3s ease-in-out;
-
+    display: flex;
     position: relative;
+    color: $light;
+    overflow: hidden;
 
-    @include hover {
-      &::after {
-        transform: scaleX(1);
-        transform-origin: left bottom;
+    .v-text-1 {
+      display: flex;
+      span {
+        display: block;
       }
-      // color: $dark;
     }
-
-    &::after {
-      content: '';
+    .v-text-2 {
+      display: flex;
       position: absolute;
+      z-index: 2;
+      top: 0;
       left: 0;
-      bottom: -6px;
-
-      height: 1px;
-      width: 100%;
-
-      background: $light;
-      border-radius: 5px;
-      transform: scaleX(0);
-      transition: transform 200ms ease-in-out;
-      transform-origin: right bottom;
+      transform: translateY(100%);
+      span {
+        display: block;
+      }
     }
+    // color: $light;
+    // position: relative;
+    // display: inline-block;
+    // overflow: hidden;
+    // @include hover {
+    //   &::after {
+    //     transform: scaleX(1);
+    //     transform-origin: left bottom;
+    //   }
+    // }
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: -6px;
+
+    //   height: 1px;
+    //   width: 100%;
+
+    //   background: $light;
+    //   border-radius: 5px;
+    //   transform: scaleX(0);
+    //   transition: transform 200ms ease-in-out;
+    //   transform-origin: right bottom;
+    // }
+
+    // &.duplicate {
+    //   position: relative;
+    //   & > span {
+    //     display: block;
+    //     white-space: nowrap;
+    //     transition: transform 0.3s ease-in-out;
+    //     &:last-child {
+    //       position: absolute;
+    //       z-index: 2;
+    //       top: 50%;
+    //       left: 50%;
+    //       translate: -50% -50%;
+    //       color: inherit;
+    //     }
+    //     &:last-child {
+    //       transform: translateY(30px);
+    //     }
+    //   }
+
+    //   @include hover {
+    //     & > span {
+    //       &:first-child {
+    //         transform: translateY(-40px);
+    //       }
+    //       &:last-child {
+    //         transform: translateY(0);
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
