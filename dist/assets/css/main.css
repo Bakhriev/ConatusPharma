@@ -195,7 +195,7 @@ body {
 .dropdown {
     position: relative;
     opacity: 0.6;
-    color: #ef2314;
+    color: #222;
     transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
     display: flex;
     align-items: center;
@@ -256,6 +256,7 @@ body {
 }
 
 .selected {
+    display: block;
     font: inherit;
 }
 
