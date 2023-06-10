@@ -1,5 +1,6 @@
 // header
 .header {
+  position: relative;
   padding: 20px 0;
   background: $darkBlueGradient;
 
@@ -10,7 +11,7 @@
     padding: 0 15px;
     display: flex;
     align-items: center;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
       justify-content: space-between;
     }
   }
@@ -21,11 +22,10 @@
     width: 100%;
 
     &.active {
-      opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
       position: fixed;
       right: 0;
       top: 0;
@@ -35,18 +35,15 @@
       gap: 30px;
 
       min-height: 100%;
-      width: 250px;
+      min-width: 100%;
 
       padding: 100px 0;
 
-      transform: translateX(400px);
-      transition: opacity 0.6s, transform 0.3s;
+      transform: translateY(-100%);
+      transition: transform 0.6s ease-in-out;
 
-      opacity: 0;
       border-radius: 5px 0 0 5px;
-      background-color: rgba(31, 41, 55, 0.9);
-
-      box-shadow: -6px 0px 24px -1px rgba(44, 51, 56, 0.15);
+      background-color: #fff;
     }
   }
 
@@ -56,11 +53,34 @@
     gap: 21px;
     color: $light;
     margin-left: auto;
+    &:active {
+      scale: 0.9;
+    }
+    @media screen and (max-width: 1320px) {
+      span {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      margin-left: 0;
+      opacity: 0;
+      transform: translateY(-100px);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      span {
+        display: block;
+      }
+    }
   }
 
   &__nav {
     margin-left: auto;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
       margin-left: 0;
     }
   }
@@ -71,7 +91,7 @@
     align-items: center;
     gap: 40px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
       flex-direction: column;
       gap: 20px;
     }
@@ -81,81 +101,42 @@
     display: flex;
     position: relative;
     color: $light;
+    &:active {
+      scale: 0.9;
+    }
+    @media screen and (max-width: 1200px) {
+      color: $dark;
+      font-size: 25px;
+      padding: 2px 0;
+      transition: color 150ms ease;
+      &:active {
+        color: $aqua;
+      }
+    }
     overflow: hidden;
 
-    .v-text-1 {
+    .v-text {
       display: flex;
       span {
         display: block;
       }
     }
     .v-text-2 {
-      display: flex;
       position: absolute;
       z-index: 2;
       top: 0;
       left: 0;
       transform: translateY(100%);
-      span {
-        display: block;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 1200px) {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      &.active {
+        opacity: 1;
       }
     }
-    // color: $light;
-    // position: relative;
-    // display: inline-block;
-    // overflow: hidden;
-    // @include hover {
-    //   &::after {
-    //     transform: scaleX(1);
-    //     transform-origin: left bottom;
-    //   }
-    // }
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   left: 0;
-    //   bottom: -6px;
-
-    //   height: 1px;
-    //   width: 100%;
-
-    //   background: $light;
-    //   border-radius: 5px;
-    //   transform: scaleX(0);
-    //   transition: transform 200ms ease-in-out;
-    //   transform-origin: right bottom;
-    // }
-
-    // &.duplicate {
-    //   position: relative;
-    //   & > span {
-    //     display: block;
-    //     white-space: nowrap;
-    //     transition: transform 0.3s ease-in-out;
-    //     &:last-child {
-    //       position: absolute;
-    //       z-index: 2;
-    //       top: 50%;
-    //       left: 50%;
-    //       translate: -50% -50%;
-    //       color: inherit;
-    //     }
-    //     &:last-child {
-    //       transform: translateY(30px);
-    //     }
-    //   }
-
-    //   @include hover {
-    //     & > span {
-    //       &:first-child {
-    //         transform: translateY(-40px);
-    //       }
-    //       &:last-child {
-    //         transform: translateY(0);
-    //       }
-    //     }
-    //   }
-    // }
   }
 }

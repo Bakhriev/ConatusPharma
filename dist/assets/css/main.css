@@ -77,6 +77,8 @@ body {
 }
 
 .wrapper {
+    position: relative;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -207,6 +209,12 @@ body {
     border-radius: 2px;
 }
 
+@media screen and (max-width: 1320px) {
+    .dropdown {
+        margin: 0 10px;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .dropdown {
         transition: opacity 0s;
@@ -246,40 +254,60 @@ body {
 }
 
 .sub-menu {
+    padding: 5px;
     position: absolute;
     transform: translateY(10px);
     opacity: 0;
     top: 35px;
     left: 50%;
     translate: -50% 0;
-    width: 120px;
+    width: 150px;
     z-index: 2;
-    max-height: 200px;
     opacity: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
     visibility: hidden;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    background-color: #90dcff;
+    background-color: rgba(53, 72, 106, 0.9);
     border-radius: 3px;
-    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
+}
+
+@media screen and (max-width: 1200px) {
+    .sub-menu {
+        background-color: rgb(53, 72, 106);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 200px;
+    }
 }
 
 .sub-menu a {
     display: block;
+    border-radius: 5px;
     padding: 5px;
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    .sub-menu a {
+        font-size: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 0;
+    }
 }
 
 @media (any-hover: hover) and (pointer: fine) {
     .sub-menu a:hover {
-        background: linear-gradient(to right, #0f79cf, #204ad3);
         color: #fff;
+        background-color: #1f2937;
     }
 }
 
 .sub-menu a:active {
-    background: linear-gradient(to right, #5e8baf, #17687c);
+    scale: 0.9;
 }
 
 .selected {
@@ -287,6 +315,13 @@ body {
     position: relative;
     display: block;
     font: inherit;
+}
+
+@media screen and (max-width: 1200px) {
+    .selected {
+        color: #222;
+        font-size: 25px;
+    }
 }
 
 .selected::before {
@@ -299,6 +334,12 @@ body {
     height: 10px;
     transition: transform 150ms linear;
     background: url("../img/icons/arrow-bottom.svg") no-repeat center/cover;
+}
+
+@media screen and (max-width: 1200px) {
+    .selected::before {
+        background: url("../img/icons/arrow-bottom-dark.svg") no-repeat center/cover;
+    }
 }
 
 .overlay {
@@ -331,7 +372,7 @@ body {
     background-color: transparent;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .burger {
         display: flex;
     }
@@ -344,7 +385,7 @@ body {
 
 .burger.active span::before, .burger.active span::after {
     transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
-    background-color: #fff;
+    background-color: #222;
 }
 
 .burger.active span::before {
@@ -366,7 +407,7 @@ body {
     width: 26px;
     transform-origin: 50% 50%;
     transition: 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-    background-color: #000;
+    background-color: #fff;
 }
 
 .burger span::before, .burger span::after {
@@ -374,7 +415,7 @@ body {
     position: absolute;
     height: 2px;
     width: 26px;
-    background-color: #000;
+    background-color: #fff;
     transform-origin: 50% 50%;
     transition: 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
 }
@@ -388,6 +429,7 @@ body {
 }
 
 .header {
+    position: relative;
     padding: 20px 0;
     background: linear-gradient(242.4deg, #0c076b 18.11%, #4247be 94.12%);
 }
@@ -401,7 +443,7 @@ body {
     align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .header__container {
         justify-content: space-between;
     }
@@ -414,11 +456,10 @@ body {
 }
 
 .header__navigation.active {
-    opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .header__navigation {
         position: fixed;
         right: 0;
@@ -427,14 +468,12 @@ body {
         flex-direction: column;
         gap: 30px;
         min-height: 100%;
-        width: 250px;
+        min-width: 100%;
         padding: 100px 0;
-        transform: translateX(400px);
-        transition: opacity 0.6s, transform 0.3s;
-        opacity: 0;
+        transform: translateY(-100%);
+        transition: transform 0.6s ease-in-out;
         border-radius: 5px 0 0 5px;
-        background-color: rgba(31, 41, 55, 0.9);
-        box-shadow: -6px 0px 24px -1px rgba(44, 51, 56, 0.15);
+        background-color: #fff;
     }
 }
 
@@ -446,11 +485,39 @@ body {
     margin-left: auto;
 }
 
+.header__btn:active {
+    scale: 0.9;
+}
+
+@media screen and (max-width: 1320px) {
+    .header__btn span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header__btn {
+        margin-left: 0;
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .header__btn.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .header__btn span {
+        display: block;
+    }
+}
+
 .header__nav {
     margin-left: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .header__nav {
         margin-left: 0;
     }
@@ -462,7 +529,7 @@ body {
     gap: 40px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .nav__list {
         flex-direction: column;
         gap: 20px;
@@ -476,16 +543,32 @@ body {
     overflow: hidden;
 }
 
-.nav__link .v-text-1 {
+.nav__link:active {
+    scale: 0.9;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav__link {
+        color: #222;
+        font-size: 25px;
+        padding: 2px 0;
+        transition: color 150ms ease;
+    }
+
+    .nav__link:active {
+        color: #90dcff;
+    }
+}
+
+.nav__link .v-text {
     display: flex;
 }
 
-.nav__link .v-text-1 span {
+.nav__link .v-text span {
     display: block;
 }
 
 .nav__link .v-text-2 {
-    display: flex;
     position: absolute;
     z-index: 2;
     top: 0;
@@ -493,6 +576,13 @@ body {
     transform: translateY(100%);
 }
 
-.nav__link .v-text-2 span {
-    display: block;
+@media screen and (max-width: 1200px) {
+    .nav__item {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .nav__item.active {
+        opacity: 1;
+    }
 }
