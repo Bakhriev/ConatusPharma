@@ -1,0 +1,205 @@
+.hero {
+  padding-top: 120px;
+  padding-bottom: 488px;
+  background: $darkBlueGradient;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__join {
+    display: flex;
+    max-width: 720px;
+    gap: 30px;
+    .blue-text {
+      color: $aqua;
+    }
+  }
+
+  &__number {
+    font-weight: 400;
+    font-size: 400px;
+    letter-spacing: -0.03em;
+    color: $light;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__brief {
+    padding-top: 75px;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: $light;
+  }
+
+  &__promocode {
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    gap: 58px;
+
+    background: linear-gradient(
+      91.08deg,
+      rgba(255, 255, 255, 0.09) 0%,
+      rgba(255, 255, 255, 0) 105.37%,
+      rgba(255, 255, 255, 0.02) 105.37%
+    );
+    backdrop-filter: blur(4.5px);
+    width: max-content;
+  }
+
+  &__discount {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    color: $aqua;
+  }
+
+  &__code {
+    font-weight: 700;
+    font-size: 18px;
+    color: $light;
+  }
+
+  &__copy-btn {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    background-color: $darkBlue;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 20px;
+      height: 20px;
+      background: url('../img/icons/copy.svg') center/cover;
+    }
+  }
+
+  &__info {
+    padding-top: 70px;
+    max-width: 540px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.03em;
+    color: $aqua;
+  }
+
+  &__text {
+    margin-bottom: 72px;
+    font-family: 'Rubik';
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+    color: #b0adff;
+  }
+
+  &__buttons {
+    margin-top: auto;
+    display: flex;
+    gap: 48px;
+  }
+
+  &__btn {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    &:first-child {
+      padding: 25px 0;
+      padding-left: 22px;
+      padding-right: 57px;
+      font-weight: 500;
+      color: $darkBlue;
+      background: #fff;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        background: url('../img/icons/arrow-right.svg') no-repeat center;
+        transform: translateY(-50%);
+        transition: transform 250ms ease-in-out;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        border-radius: 50%;
+        // scale: 0;
+        transform-origin: center;
+        background-color: $aqua;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        transition: 250ms linear all;
+      }
+      @include hover {
+        &::after {
+          height: 400px;
+          width: 400px;
+          transition: width 0.5s linear, height 0.5s linear;
+        }
+
+        &::before {
+          background: url('../img/icons/arrow-right.svg') no-repeat center;
+          transform: translate(10px, -50%);
+        }
+      }
+      &:active {
+        scale: 0.97;
+      }
+    }
+    &:last-child {
+      padding: 22px 40px;
+      color: $light;
+      border: 3px solid #fff;
+      transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      &:active {
+        scale: 0.97;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -50px;
+        height: 100px;
+        width: 0;
+        transform: translateY(-50%);
+        transform-origin: left;
+        background-color: $aqua;
+        z-index: -1;
+        transition: 0.3s linear all;
+      }
+      @include hover {
+        &::after {
+          width: 400px;
+        }
+        color: #000;
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@
 // UI / Buttons
 @import '../ui/buttons/epic/epic-btn.scss';
 @import '../ui/buttons/shiny/shiny-btn.scss';
+@import '../ui/buttons/ripple/ripple-btn.scss';
 
 // UI / DROPDOWN
 @import '../ui/dropdown/dropdown.scss';
@@ -21,3 +22,4 @@
 // Layouts
 @import './layouts/header';
 @import './layouts/footer';
+@import './layouts/hero';

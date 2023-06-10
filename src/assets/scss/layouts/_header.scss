@@ -1,8 +1,10 @@
 // header
 .header {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   padding: 20px 0;
-  background: $darkBlueGradient;
 
   &__container {
     max-width: 1750px;
