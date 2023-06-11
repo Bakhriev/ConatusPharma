@@ -170,12 +170,12 @@ rippleBtns.forEach(btn => {
 export function rippleEffect(e) {
   const { clientX, clientY } = e
   const { x, y } = e.target.getBoundingClientRect()
-  const xx = clientX - x
-  const yy = clientY - y
+  const btnX = clientX - x
+  const btnY = clientY - y
 
   const span = document.createElement('span')
-  span.style.left = `${xx}px`
-  span.style.top = `${yy}px`
+  span.style.left = `${btnX}px`
+  span.style.top = `${btnY}px`
   this.appendChild(span)
   setTimeout(() => {
     span.remove()
