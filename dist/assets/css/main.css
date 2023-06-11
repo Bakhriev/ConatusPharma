@@ -203,6 +203,40 @@ body {
     scale: 0.97;
 }
 
+.ripple-btn {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-btn > span {
+    position: absolute;
+    z-index: 2;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    animation: ripple 0.8s linear infinite;
+}
+
+.ripple-btn--dark > span {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes ripple {
+    from {
+        opacity: 0.5;
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        opacity: 0;
+        width: 400px;
+        height: 400px;
+    }
+}
+
 .dropdown {
     margin: 0 20px;
     position: relative;
@@ -982,6 +1016,7 @@ body {
 .hero__copy-btn {
     flex-shrink: 0;
     position: relative;
+    z-index: 1;
     width: 64px;
     height: 64px;
     background-color: #100b6f;
@@ -990,6 +1025,7 @@ body {
 .hero__copy-btn::before {
     content: "";
     position: absolute;
+    z-index: -1;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
@@ -1602,8 +1638,4 @@ body {
 
 .dots__link--blue {
     color: #2da4db;
-}
-
-.wrapper {
-    overflow: hidden;
 }

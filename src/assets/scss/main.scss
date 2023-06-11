@@ -10,6 +10,7 @@
 // UI / Buttons
 @import '../ui/buttons/epic/epic-btn.scss';
 @import '../ui/buttons/shiny/shiny-btn.scss';
+@import '../ui/buttons/ripple/ripple-btn.scss';
 
 // UI / DROPDOWN
 @import '../ui/dropdown/dropdown.scss';
@@ -146,8 +147,4 @@
   &__link--blue {
     color: #2da4db;
   }
-}
-
-.wrapper {
-  overflow: hidden;
 }

@@ -160,3 +160,24 @@ if (window.innerWidth > 1024) {
     })
   })
 }
+
+const rippleBtns = document.querySelectorAll('.ripple-btn')
+
+rippleBtns.forEach(btn => {
+  btn.addEventListener('click', rippleEffect)
+})
+
+export function rippleEffect(e) {
+  const { clientX, clientY } = e
+  const { x, y } = e.target.getBoundingClientRect()
+  const xx = clientX - x
+  const yy = clientY - y
+
+  const span = document.createElement('span')
+  span.style.left = `${xx}px`
+  span.style.top = `${yy}px`
+  this.appendChild(span)
+  setTimeout(() => {
+    span.remove()
+  }, 800)
+}
