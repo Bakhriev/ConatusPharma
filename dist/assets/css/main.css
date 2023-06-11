@@ -4,6 +4,7 @@ html {
     -webkit-text-size-adjust: 100%;
  /* 2 */
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -192,34 +193,6 @@ body {
 
 .shiny-btn:active {
     scale: 0.97;
-}
-
-.ripple-btn {
-    position: relative;
-    overflow: hidden;
-}
-
-.ripple-btn > span {
-    position: absolute;
-    translate: -50% -50%;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
-    pointer-events: none;
-    animation: ripple 0.8s linear infinite;
-}
-
-@keyframes ripple {
-    from {
-        opacity: 0.5;
-        width: 0;
-        height: 0;
-    }
-
-    to {
-        opacity: 0;
-        width: 400px;
-        height: 400px;
-    }
 }
 
 .dropdown {
@@ -887,4 +860,185 @@ body {
 
 .hero__btn:last-child {
     border: 3px solid #fff;
+}
+
+.search {
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+.search__container {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.search__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #100b6f;
+}
+
+.search__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.search__text-wrapper:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.search__text {
+    font-family: "Rubik";
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: -0.03em;
+    color: #3f3f51;
+}
+
+.search__field {
+    width: 600px;
+    display: flex;
+}
+
+.search__input {
+    width: 100%;
+    background: #ffffff;
+    border: 3px solid #100b6f;
+    padding: 20px 24px;
+    outline: none;
+}
+
+.search__search {
+    position: relative;
+    width: 64px;
+    flex-grow: 1;
+    background-color: #100b6f;
+}
+
+.search__search::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 22px;
+    height: 22px;
+    background: url("../img/icons/search.svg") no-repeat center/cover;
+}
+
+.search__nav {
+    padding: 50px;
+    position: relative;
+    max-width: 540px;
+    width: 100%;
+    background-color: #90dcff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.search__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.search__item {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.53);
+}
+
+.search__item::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url("../img/icons/arrow-right.svg") no-repeat center;
+    transition: 0.3s ease-in-out all;
+}
+
+.search__item::before {
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 110%;
+    height: 0;
+    transform-origin: top center;
+    background-color: #100b6f;
+    transition: height 0.3s linear;
+    z-index: -1;
+}
+
+@media (any-hover: hover) and (pointer: fine) {
+    .search__item:hover::before {
+        height: 110%;
+    }
+
+    .search__item:hover .search__link > span:first-child {
+        color: #fff;
+    }
+
+    .search__item:hover::after {
+        background: url("../img/icons/arrow-right.svg") no-repeat center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 20px;
+    }
+}
+
+.search__link {
+    display: flex;
+    gap: 10px;
+}
+
+.search__link > span {
+    transition: color 0.3s ease-in-out;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 52px;
+    letter-spacing: -0.03em;
+}
+
+.search__link > span:first-child {
+    color: #0d086c;
+}
+
+.search__link > span:last-child {
+    color: #fff;
+}
+
+.search__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #100b6f;
+    padding: 22px 65px;
+    background-color: #fff;
+    width: -moz-max-content;
+    width: max-content;
+    display: grid;
+    place-items: center;
 }
