@@ -1,22 +1,32 @@
 .footer {
   padding-top: 40px;
   background: $darkBlueGradient;
+
   &__container {
     display: flex;
-    gap: 390px;
-    max-width: 930px;
+    gap: 380px;
+    max-width: 1470px;
+    margin: 0 auto;
     padding: 0 15px;
     width: 100%;
-    margin-left: 215px;
-  }
-
-  &__info {
-    padding-bottom: 110px;
+    padding-bottom: 80px;
+    @media screen and (max-width: 992px) {
+      gap: 0;
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+      gap: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &__logo {
     margin-bottom: 42px;
     display: inline-block;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__adress {
@@ -66,11 +76,12 @@
   &__nav {
     display: flex;
     flex-direction: column;
+    gap: 23px;
   }
   &__title {
+    margin-top: -5px;
     font-weight: 400;
     font-size: 24px;
-    line-height: 52px;
     letter-spacing: -0.03em;
     color: $aqua;
   }
@@ -94,6 +105,9 @@
     display: flex;
     align-items: center;
     gap: 86px;
+    @media screen and (max-width: 768px) {
+      gap: 10px;
+    }
     justify-content: center;
     background: rgba(13, 8, 108, 0.7);
     backdrop-filter: blur(3px);
@@ -105,9 +119,18 @@
     font-size: 16px;
     line-height: 26px;
     color: $light;
+    @media screen and (max-width: 768px) {
+      font-size: 10px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 8px;
+    }
 
     &:not(:last-child) {
       &::after {
+        @media screen and (max-width: 768px) {
+          content: none;
+        }
         content: '';
         position: absolute;
         top: 50%;

@@ -206,16 +206,39 @@
       scale: 0.97;
     }
     &:first-child {
+      position: relative;
+      z-index: 1;
       padding: 20px 20px;
       color: $darkBlue;
       display: flex;
       align-items: center;
       gap: 17px;
       background-color: #fff;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 100%;
+        background-color: $aqua;
+        z-index: -1;
+        transition: width 0.3s linear;
+      }
     }
 
     &:last-child {
       border: 3px solid #fff;
+      transition: 0.3s linear all;
+    }
+
+    @include hover {
+      &:first-child {
+        &::before {
+          width: 100%;
+        }
+      }
     }
   }
 }

@@ -3,6 +3,27 @@
   padding-bottom: 72px;
   position: relative;
   background: #e2f7ff;
+  @media screen and (max-width: 1370px) {
+    padding-top: 400px;
+  }
+  @media screen and (max-width: 1300px) {
+    padding-top: 250px;
+  }
+  @media screen and (max-width: 992px) {
+    padding-top: 700px;
+  }
+  @media screen and (max-width: 900px) {
+    padding-top: 750px;
+  }
+  @media screen and (max-width: 575px) {
+    padding-top: 850px;
+  }
+  @media screen and (max-width: 460px) {
+    padding-top: 950px;
+  }
+  @media screen and (max-width: 390px) {
+    padding-top: 1100px;
+  }
 
   &__container {
     margin: 0 auto;
@@ -17,6 +38,11 @@
 
   &__title {
     margin-bottom: 24px;
+    @media screen and (max-width: 992px) {
+      font-size: 25px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
   }
 
   &__text {
@@ -24,6 +50,10 @@
     font-size: 17px;
     line-height: 26px;
     letter-spacing: -0.03em;
+
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+    }
 
     color: $gray;
   }
