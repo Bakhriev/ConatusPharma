@@ -160,21 +160,3 @@ if (window.innerWidth > 1024) {
     })
   })
 }
-
-// Ripple
-
-function rippleEffect(e) {
-  const x = e.clientX - e.target.offsetLeft
-  const y = e.clientY - e.target.offsetTop
-
-  const span = document.createElement('span')
-  span.style.left = `${x}px`
-  span.style.top = `${y}px`
-  this.appendChild(span)
-  setTimeout(() => {
-    span.remove()
-  }, 800)
-}
-
-const copyBtn = document.querySelector('.hero__copy-btn')
-copyBtn.addEventListener('click', rippleEffect)
