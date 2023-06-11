@@ -13,9 +13,9 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="assets/css/vendors/normalize.css"
+      href="../css/vendors/normalize.css"
     />
-    <link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="..//css/main.min.css" />
     <title>Document</title>
   </head>
 
@@ -25,7 +25,7 @@
       <header class="header">
         <div class="header__container">
           <a href="/" class="header__logo"
-            ><img src="assets/img/icons/logo.svg" alt="logo"
+            ><img src="../img/icons/logo.svg" alt="logo"
           /></a>
           <div class="header__navigation">
             <nav class="nav header__nav">
@@ -206,200 +206,176 @@
           </div>
         </div>
       </header>
-
       <main class="main">
-        <section class="hero">
-          <div class="hero__container">
-            <div class="hero__join">
-              <div class="hero__number">4</div>
-
-              <div class="hero__link-wrapper">
-                <p class="hero__brief">
-                  <span class="hero__mobile-number">4</span>
-                  <span>easy steps</span>
-                  <span>for <span class="blue-text">medicines</span></span>
-                </p>
-                <div class="hero__promocode">
-                  <span class="hero__discount">10% OFF</span>
-                  <span class="hero__code">“PHARMACY10”</span>
-                  <button class="hero__copy-btn"></button>
-                </div>
-              </div>
-            </div>
-            <div class="hero__info">
-              <div class="hero__text-wrapper">
-                <p class="hero__title">
-                  A&nbsp;Reliable Source of&nbsp;Canadian Drugs
-                </p>
-                <p class="hero__text">
-                  Since the inception of&nbsp;our mail-order business, our
-                  Canadian pharmacy has experienced remarkable growth and
-                  innovation. At&nbsp;Innocrin, we&nbsp;take pride
-                  in&nbsp;providing not only cost-effective but also secure and
-                  dependable prescription drugs to&nbsp;our esteemed clientele.
-                  Our dedication lies in&nbsp;offering the most competitive
-                  prices in&nbsp;the market while ensuring a&nbsp;smooth and
-                  delightful experience for our customers.
-                </p>
-                <div class="hero__buttons">
-                  <button class="hero__btn btn">
-                    <span>Why Our Prices Lower</span>
-                    <svg
-                      width="21"
-                      height="13"
-                      viewBox="0 0 21 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.5 0.550293L19.7989 5.94979M19.7989 5.94979L14.5 11.5503M19.7989 5.94979L-8.14008e-05 5.94979"
-                        stroke="#1E1C7F"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
-                  <button class="hero__btn btn shiny-btn">
-                    Savings and Discounts
-                  </button>
-                </div>
-              </div>
-            </div>
+        <section class="main-hero">
+          <div class="main-hero__container">
+            <h1 class="main-hero__title">Drug Search and Catalog</h1>
           </div>
         </section>
-        <section class="about">
-          <div class="search">
-            <div class="search__container">
-              <div class="search__info">
-                <h1 class="search__title">
-                  Canadian Pharmacy Online&nbsp;&mdash; Over&nbsp;7 Years
-                  of&nbsp;International Level
-                </h1>
-                <div class="search__text-wrapper">
-                  <p class="search__text">
-                    Our Canadian pharmacy allows you to&nbsp;order medications
-                    from the comfort of&nbsp;your home or&nbsp;workplace,
-                    at&nbsp;a&nbsp;time most suitable for you. We&nbsp;guarantee
-                    a&nbsp;secure transaction process, accepting a&nbsp;wide
-                    range of&nbsp;credit cards for your convenience. Many people
-                    spend excessive amounts each month to&nbsp;maintain their
-                    health. No&nbsp;Canadian or&nbsp;American should have
-                    to&nbsp;suffer or&nbsp;face adverse circumstances simply
-                    because they can&rsquo;t afford essential prescription
-                    medications.
-                  </p>
-                  <p class="search__text">
-                    Rising drug costs also impact those with comprehensive
-                    health insurance, as&nbsp;high medication prices drive
-                    up&nbsp;insurance premiums, making obtaining health coverage
-                    increasingly costly and challenging. We&nbsp;are committed
-                    to&nbsp;addressing these issues head-on at&nbsp;the Canadian
-                    pharmacy.
-                  </p>
-                </div>
-                <div class="search__field">
-                  <input
-                    type="text"
-                    class="search__input"
-                    placeholder="Type your keyword..."
-                  />
-                  <button class="search__search"></button>
-                </div>
+        <section class="all">
+          <div class="all__container">
+            <p class="all__text">
+              Canadian pharmacy online enables you to easily browse, choose, and
+              order premium medications from the comfort of your home. Learn
+              about the variety of categories, best-selling products, and
+              exclusive discounts available in our carefully assembled
+              medication catalog.
+            </p>
+            <h2 class="all__title title-2">Drug Categories</h2>
+            <p class="all__text">
+              Our all-inclusive medication catalog is designed to cater to
+              various health conditions and necessities. Some of our leading
+              categories include:
+            </p>
+            <!-- List -->
+            <ul class="all__nums">
+              <li class="all__num">
+                <span>1.</span>
+                <span>Allergies:</span>
+                <span
+                  >Alleviate seasonal or perennial allergies with our assortment
+                  of antihistamines, nasal sprays, and eye drops.</span
+                >
+              </li>
+              <li class="all__num">
+                <span>2.</span>
+                <span>Pain Management:</span>
+                <span
+                  >Control pain effectively with our selection of
+                  over-the-counter and prescription pain relievers,
+                  anti-inflammatory drugs, and muscle relaxants.</span
+                >
+              </li>
+              <li class="all__num">
+                <span>3.</span>
+                <span>Mental Wellness:</span>
+                <span
+                  >Explore medications for anxiety, depression, ADHD, and other
+                  mental health conditions, all meticulously reviewed by our
+                  expert pharmacists.</span
+                >
+              </li>
+              <li class="all__num">
+                <span>4.</span>
+                <span>Cardiac Health:</span>
+                <span
+                  >Promote a healthy heart with our collection of medications
+                  for hypertension, high cholesterol, and other cardiovascular
+                  issues.</span
+                >
+              </li>
+              <li class="all__num">
+                <span>5.</span>
+                <span>Diabetes:</span>
+                <span
+                  >Regulate your blood sugar levels with our variety of insulin,
+                  oral medications, and diabetic supplies.</span
+                >
+              </li>
+            </ul>
+            <!-- List -->
+            <p class="all__text">
+              … and many more. Our user-friendly interface allows for seamless
+              navigation through the different categories to locate the
+              medications you require.
+            </p>
+            <h2 class="all__title title-2">
+              Uncover Our Top-Selling Medications
+            </h2>
+            <p class="all__text">
+              Our bestsellers list showcases popular, high-quality medications
+              that have proven beneficial for numerous customers. Stay informed
+              about the latest highly-rated medications and make educated
+              decisions based on the experiences of others.
+            </p>
+            <!-- List -->
+            <ul class="dots">
+              <div class="dots__row">
+                <li class="dots__item">
+                  <a href="#" class="dots__link">Generic Viagra</a>
+                </li>
+                <li class="dots__item">
+                  <a href="#" class="dots__link">Generic Viagra</a>
+                </li>
+                <li class="dots__item">
+                  <a href="#" class="dots__link">Generic Viagra</a>
+                </li>
               </div>
-              <div class="search__nav">
-                <div class="search__icon">
-                  <img src="./assets/img/icons/best.svg" alt="" />
-                </div>
-                <ul class="search__list">
-                  <li class="search__item">
-                    <a href="#" class="search__link">
-                      <span>Cialis</span>
-                      <span>(Tadalafil)</span>
-                    </a>
-                  </li>
-                  <li class="search__item">
-                    <a href="#" class="search__link">
-                      <span>Plavix</span>
-                      <span>(Clopidogrel)</span>
-                    </a>
-                  </li>
-                  <li class="search__item">
-                    <a href="#" class="search__link">
-                      <span>Flagyl</span>
-                      <span>(Metronidazole)</span>
-                    </a>
-                  </li>
-                  <li class="search__item">
-                    <a href="#" class="search__link">
-                      <span>Biaxin</span>
-                      <span>(Clarithromycin)</span>
-                    </a>
-                  </li>
-                  <li class="search__item">
-                    <a href="#" class="search__link">
-                      <span>Levitra</span>
-                      <span>(Vardenafil)</span>
-                    </a>
-                  </li>
-                </ul>
-                <a href="#" class="search__btn epic-btn">
-                  <span>More Products</span>
-                  <span>More Products</span>
-                </a>
+              <div class="dots__row">
+                <li class="dots__item">
+                  <a href="#" class="dots__link dots__link--blue"
+                    >Generic Viagra A HOVER</a
+                  >
+                </li>
+                <li class="dots__item">
+                  <a href="#" class="dots__link dots__link--blue"
+                    >Generic Viagra A HOVER</a
+                  >
+                </li>
+                <li class="dots__item">
+                  <a href="#" class="dots__link dots__link--blue"
+                    >Generic Viagra A HOVER</a
+                  >
+                </li>
               </div>
-            </div>
-          </div>
-
-          <div class="about__container">
-            <div class="about__item">
-              <h2 class="about__title title-2">Our Objective</h2>
-              <p class="about__text">
-                It&rsquo;s distressing to&nbsp;see underprivileged populations
-                in&nbsp;the USA struggling with illnesses that are entirely
-                treatable with affordable medications. For instance, a&nbsp;drug
-                like Albendazole, typically prescribed for parasitic infections,
-                can cost up&nbsp;to&nbsp;$500 per course, making
-                it&nbsp;unattainable for many who desperately need&nbsp;it. Our
-                objective is&nbsp;not only to&nbsp;significantly reduce the cost
-                of&nbsp;drugs like Albendazole, Cialis, Amoxicillin, and Viagra,
-                but also to&nbsp;introduce pricing transparency,
-                so&nbsp;customers can be&nbsp;confident they&rsquo;re receiving
-                a&nbsp;fair deal.
-              </p>
-            </div>
-            <div class="about__item">
-              <h2 class="about__title title-2">
-                Unparalleled Pricing Transparency and Affordability
-              </h2>
-              <p class="about__text">
-                Our pricing model is&nbsp;straightforward and transparent: our
-                cost plus a&nbsp;15% markup, plus any pharmacy fees. For
-                example, our cost for Albendazole is&nbsp;$26.08 per course.
-                After adding the&nbsp;15% markup to&nbsp;cover operational costs
-                and investments in&nbsp;disrupting the drug pricing for
-                as&nbsp;many medications as&nbsp;possible, the base price
-                becomes $30. We&nbsp;then add the actual cost of&nbsp;$3.00 that
-                our pharmacy partners charge to&nbsp;prepare and provide your
-                prescription. This results in&nbsp;a&nbsp;final price
-                of&nbsp;$33, significantly lower than what&rsquo;s available
-                in&nbsp;the market. All our products follow this pricing
-                structure, ensuring complete transparency.
-              </p>
-            </div>
-            <div class="about__item">
-              <h2 class="about__title title-2">As We Grow, You Save</h2>
-              <p class="about__text">
-                As&nbsp;Canadian drugstore grows and our costs decrease,
-                we&rsquo;re dedicated to&nbsp;passing those savings
-                on&nbsp;to&nbsp;you, our valued customer. By&nbsp;supporting our
-                service, you&rsquo;re actively participating in&nbsp;the
-                movement to&nbsp;disrupt the pharmaceutical industry and put
-                an&nbsp;end to&nbsp;excessive drug prices.
-              </p>
-              <p class="about__text about__text--bold">
-                Thank you for your support, and please share your thoughts and
-                feedback with&nbsp;us!
-              </p>
-            </div>
+            </ul>
+            <!-- List -->
+            <h2 class="all__title title-2">Exclusive Deals and Cost Savings</h2>
+            <p class="all__text">
+              We recognize that healthcare expenses can be challenging. That’s
+              why we present exclusive deals and promotions to help you save on
+              your medication purchases. Look out for special offers on our
+              platform, such as:
+            </p>
+            <!-- List -->
+            <ul class="all__nums">
+              <li class="all__num">
+                <span>1.</span>
+                <span>Seasonal specials:</span>
+                <span
+                  >Take advantage of timely discounts on specific medications or
+                  categories during various seasons or holidays.</span
+                >
+              </li>
+              <li class="all__num">
+                <span>2.</span>
+                <span>Bulk order discounts:</span>
+                <span
+                  >Enjoy greater savings when you purchase larger quantities of
+                  your medications, making it both economical and
+                  convenient.</span
+                >
+              </li>
+              <li class="all__num">
+                <span>3.</span>
+                <span>Rewards program:</span>
+                <span
+                  >Enroll in our rewards program to accumulate points on every
+                  purchase and redeem them for discounts on future orders.</span
+                >
+              </li>
+            </ul>
+            <!-- List -->
+            <p class="all__text">
+              Thank you for your support, and please share your thoughts and
+              feedback with us!
+            </p>
+            <h2 class="all__text text-2">Quality and Safety Commitment</h2>
+            <p class="all__text">
+              Our skilled team rigorously assess each medication to ensure it
+              adheres to strict standards. Furthermore, we source our
+              medications exclusively from reputable manufacturers and
+              suppliers, guaranteeing the highest level of quality and safety
+              for our customers.
+            </p>
+            <h2 class="all__title title-2">Responsive Customer Support</h2>
+            <p class="all__text">
+              Our proficient customer support team is always on hand to help you
+              explore our medication catalog and address any questions you may
+              have. Whether you need assistance in choosing the appropriate
+              medication or require more information on a specific product, our
+              friendly staff can be reached via phone, email, or live chat.
+            </p>
           </div>
         </section>
       </main>
@@ -407,7 +383,7 @@
         <div class="footer__container">
           <div class="footer__info">
             <a href="/" class="footer__logo">
-              <img src="./assets/img/icons/logoBig.svg" alt="logo" />
+              <img src="../img/icons/logoBig.svg" alt="logo" />
             </a>
             <div class="footer__adress">
               <span>Affordable Canadian Pharmacy. 16745 West</span>
@@ -464,6 +440,6 @@
         </ul>
       </footer>
     </div>
-    <script type="module" src="./assets/js/main.min.js"></script>
+    <script type="module" src="../js/main.min.js"></script>
   </body>
 </html>

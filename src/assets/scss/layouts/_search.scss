@@ -1,11 +1,9 @@
 .search {
   padding: 0 15px;
-  position: absolute;
-  top: -368px;
-  left: 50%;
+  position: relative;
   width: 100%;
-  transform: translateX(-50%);
   z-index: 2;
+  margin-top: -370px;
   &__container {
     max-width: 1480px;
     width: 100%;
@@ -14,6 +12,8 @@
     @media screen and (max-width: 992px) {
       flex-direction: column;
       gap: 40px;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     background-color: #fff;
@@ -74,6 +74,13 @@
     border: 3px solid $darkBlue;
     padding: 20px 24px;
     outline: none;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+
     @media screen and (max-width: 1300px) {
       padding: 10px 15px;
     }

@@ -1,6 +1,20 @@
 .hero {
+  position: relative;
+  z-index: 1;
   padding: 200px 0 488px;
   background: $darkBlueGradient;
+  overflow: hidden;
+  &::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background: url(../img/heroBg.svg) no-repeat center/cover;
+  }
   @media screen and (max-width: 1200px) {
     padding-top: 120px;
   }
