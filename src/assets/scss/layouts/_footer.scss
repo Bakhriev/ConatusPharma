@@ -1,0 +1,126 @@
+.footer {
+  padding-top: 40px;
+  background: $darkBlueGradient;
+  &__container {
+    display: flex;
+    gap: 390px;
+    max-width: 930px;
+    padding: 0 15px;
+    width: 100%;
+    margin-left: 215px;
+  }
+
+  &__info {
+    padding-bottom: 110px;
+  }
+
+  &__logo {
+    margin-bottom: 42px;
+    display: inline-block;
+  }
+
+  &__adress {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $light;
+  }
+
+  &__email {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__btn {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: #4247a6;
+  }
+
+  &__link-text {
+    display: flex;
+    flex-direction: column;
+    & > span {
+      &:first-child {
+        font-family: 'Rubik';
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: -0.03em;
+        color: #b0adff;
+      }
+      &:last-child {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: $light;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 52px;
+    letter-spacing: -0.03em;
+    color: $aqua;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+  }
+  &__link {
+    font-family: 'Plus Jakarta Display';
+    font-weight: 400;
+    font-size: 20px;
+    color: $light;
+  }
+
+  &__copyright {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 86px;
+    justify-content: center;
+    background: rgba(13, 8, 108, 0.7);
+    backdrop-filter: blur(3px);
+  }
+
+  &__copy-item {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $light;
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -50px;
+        transform: translateY(-50%);
+        background: #2da4db;
+        width: 6px;
+        border-radius: 50%;
+        height: 6px;
+      }
+    }
+    &:first-child {
+      color: #b0adff;
+    }
+  }
+}
